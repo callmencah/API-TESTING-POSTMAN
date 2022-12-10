@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "841f8c19-83f1-40d4-88fa-674b414ff90a",
+		"name": "Glints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24418410"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiMjAyMi0xMS0xOFQxNDoyNTowMy45MThaIiwiaWF0IjoxNjY4NzgxNTAzLCJleHAiOjE2NjkzODYzMDMsImF1ZCI6IjJmNThjNjY3MDJjMjliODIxZWZlYzU4Yjg0ZTFhYTg0ZWUyZDJhMDNhM2JkMmRmOGFlYTYxZmNkNWU1Y2E1MGQiLCJpc3MiOiJnbGludHMiLCJzdWIiOiIxYmNhOWM3MS00Mzc3LTQ2OGMtODk2MC1hMzI1NWQ4NTQ5NDYifQ.pJaHtZV-t-1Td9jmpEe6o5oGvvb0mvbN1jedxfcP5VU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"grant_type\": \"password\",\r\n    \"client_id\": \"2f58c66702c29b821efec58b84e1aa84ee2d2a03a3bd2df8aea61fcd5e5ca50d\",\r\n    \"username\": \"burgerbros@handmadeburgers.ph\",\r\n    \"password\": \"test123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}api/oauth2/token",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiMjAyMi0xMS0xOFQxNDoyODozMC42ODZaIiwiaWF0IjoxNjY4NzgxNzEwLCJleHAiOjE2NjkzODY1MTAsImF1ZCI6IjJmNThjNjY3MDJjMjliODIxZWZlYzU4Yjg0ZTFhYTg0ZWUyZDJhMDNhM2JkMmRmOGFlYTYxZmNkNWU1Y2E1MGQiLCJpc3MiOiJnbGludHMiLCJzdWIiOiIxYmNhOWM3MS00Mzc3LTQ2OGMtODk2MC1hMzI1NWQ4NTQ5NDYifQ.qvc2j3aogkUjG_R11pz3XX6LyRBT5nZE3tDbaob0Av8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}api/me?include=Companies,+Group,+PendingUserCompanies",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"me"
+					],
+					"query": [
+						{
+							"key": "include",
+							"value": "Companies,+Group,+PendingUserCompanies"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiMjAyMi0xMS0xOFQxNDowNToyMS4zMzhaIiwiaWF0IjoxNjY4NzgwMzIxLCJleHAiOjE2NjkzODUxMjEsImF1ZCI6IjJmNThjNjY3MDJjMjliODIxZWZlYzU4Yjg0ZTFhYTg0ZWUyZDJhMDNhM2JkMmRmOGFlYTYxZmNkNWU1Y2E1MGQiLCJpc3MiOiJnbGludHMiLCJzdWIiOiIxYmNhOWM3MS00Mzc3LTQ2OGMtODk2MC1hMzI1NWQ4NTQ5NDYifQ.8Xjfk_8a0aZy3408vXwo9Oz7wtWeOuvLa0VLNs5H80Q",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

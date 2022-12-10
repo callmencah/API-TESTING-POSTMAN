@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "4f2ceba2-65ba-4274-91ec-b042d6cca1f9",
+		"name": "Reqres",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24418410"
+	},
+	"item": [
+		{
+			"name": "List users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/api/users2",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"users2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

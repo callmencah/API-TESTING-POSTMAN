@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "e7808a19-5c3e-4abb-bde5-5dafc532f8db",
+		"name": "Cicle",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24418410"
+	},
+	"item": [
+		{
+			"name": "Board",
+			"item": [
+				{
+					"name": "Create List",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYzNDZjNDg1NTc1NzdhMWM5NDhhODU1MSIsImdvb2dsZUlkIjoiMTE3NjQ1MDEyMjQ3NTM1NzkyMjM5IiwiZW1haWwiOiJuY2FoMTdAZ21haWwuY29tIiwiZnVsbE5hbWUiOiJuY2FoIDE3IiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BTG01d3UzT0o3cjU5R1B5czZvMGVUSGxEMzkzR3d0MFlwTmdqenZTUUY0Sj1zOTYtYyIsImJpbyI6IiIsInN0YXR1cyI6IiIsImRlZmF1bHRDb21wYW55IjpudWxsLCJjcmVhdGVkQXQiOiIyMDIyLTEwLTEyVDEzOjQzOjMzLjIwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTEwLTIxVDA3OjU1OjAxLjg4NloiLCJfX3YiOjB9LCJpYXQiOjE2Njg3ODI1MDYsImV4cCI6MTY3MTM3NDUwNn0.dL046qtyHaJdcMemU83Q1-uf8FvTPJEoPM1i0eks5bE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"selector\": {\r\n        \"boardId\": \"637b71ecb24aac5c97536575\"\r\n    },\r\n    \"data\": {\r\n        \"name\": \"Tes1\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}api/v1/lists/?companyId=63779a18b24aac5c973a0fd2",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"v1",
+								"lists",
+								""
+							],
+							"query": [
+								{
+									"key": "companyId",
+									"value": "63779a18b24aac5c973a0fd2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Klik Board",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYzNDZjNDg1NTc1NzdhMWM5NDhhODU1MSIsImdvb2dsZUlkIjoiMTE3NjQ1MDEyMjQ3NTM1NzkyMjM5IiwiZW1haWwiOiJuY2FoMTdAZ21haWwuY29tIiwiZnVsbE5hbWUiOiJuY2FoIDE3IiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BTG01d3UzT0o3cjU5R1B5czZvMGVUSGxEMzkzR3d0MFlwTmdqenZTUUY0Sj1zOTYtYyIsImJpbyI6IiIsInN0YXR1cyI6IiIsImRlZmF1bHRDb21wYW55IjpudWxsLCJjcmVhdGVkQXQiOiIyMDIyLTEwLTEyVDEzOjQzOjMzLjIwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTEwLTIxVDA3OjU1OjAxLjg4NloiLCJfX3YiOjB9LCJpYXQiOjE2Njg3ODI1MDYsImV4cCI6MTY3MTM3NDUwNn0.dL046qtyHaJdcMemU83Q1-uf8FvTPJEoPM1i0eks5bE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"Get board list card successful\",\r\n    \"board\": {\r\n        \"_id\": \"637b71ecb24aac5c97536575\",\r\n        \"name\": \"Kanban Board\",\r\n        \"desc\": \"Track progress with this Kanban-styled board\",\r\n        \"lists\": [],\r\n        \"labels\": [],\r\n        \"createdAt\": \"2022-11-21T12:41:16.195Z\",\r\n        \"updatedAt\": \"2022-11-21T12:41:16.195Z\",\r\n        \"__v\": 0,\r\n        \"totalList\": 0\r\n    },\r\n    \"currentTeam\": {\r\n        \"_id\": \"637b71ecb24aac5c97536571\",\r\n        \"name\": \"Testingg22\",\r\n        \"desc\": \"s\",\r\n        \"type\": \"team\",\r\n        \"archived\": {\r\n            \"status\": false\r\n        },\r\n        \"createdAt\": \"2022-11-21T12:41:16.186Z\",\r\n        \"updatedAt\": \"2022-11-21T12:41:16.203Z\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}v2/boards/637b71ecb24aac5c97536575?limitList=10&limitCard=10&teamId=637b71ecb24aac5c97536571&companyId=63779a18b24aac5c973a0fd2",
+					"host": [
+						"{{BaseUrl}}v2"
+					],
+					"path": [
+						"boards",
+						"637b71ecb24aac5c97536575"
+					],
+					"query": [
+						{
+							"key": "limitList",
+							"value": "10"
+						},
+						{
+							"key": "limitCard",
+							"value": "10"
+						},
+						{
+							"key": "teamId",
+							"value": "637b71ecb24aac5c97536571"
+						},
+						{
+							"key": "companyId",
+							"value": "63779a18b24aac5c973a0fd2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Team Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYzNDZjNDg1NTc1NzdhMWM5NDhhODU1MSIsImdvb2dsZUlkIjoiMTE3NjQ1MDEyMjQ3NTM1NzkyMjM5IiwiZW1haWwiOiJuY2FoMTdAZ21haWwuY29tIiwiZnVsbE5hbWUiOiJuY2FoIDE3IiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BTG01d3UzT0o3cjU5R1B5czZvMGVUSGxEMzkzR3d0MFlwTmdqenZTUUY0Sj1zOTYtYyIsImJpbyI6IiIsInN0YXR1cyI6IiIsImRlZmF1bHRDb21wYW55IjpudWxsLCJjcmVhdGVkQXQiOiIyMDIyLTEwLTEyVDEzOjQzOjMzLjIwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTEwLTIxVDA3OjU1OjAxLjg4NloiLCJfX3YiOjB9LCJpYXQiOjE2Njg3ODI1MDYsImV4cCI6MTY3MTM3NDUwNn0.dL046qtyHaJdcMemU83Q1-uf8FvTPJEoPM1i0eks5bE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Testingg22\",\r\n    \"desc\": \"s\",\r\n    \"type\": \"team\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}api/v1/teams?companyId=63779a18b24aac5c973a0fd2",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"v1",
+						"teams"
+					],
+					"query": [
+						{
+							"key": "companyId",
+							"value": "63779a18b24aac5c973a0fd2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Team Info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYzNDZjNDg1NTc1NzdhMWM5NDhhODU1MSIsImdvb2dsZUlkIjoiMTE3NjQ1MDEyMjQ3NTM1NzkyMjM5IiwiZW1haWwiOiJuY2FoMTdAZ21haWwuY29tIiwiZnVsbE5hbWUiOiJuY2FoIDE3IiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BTG01d3UzT0o3cjU5R1B5czZvMGVUSGxEMzkzR3d0MFlwTmdqenZTUUY0Sj1zOTYtYyIsImJpbyI6IiIsInN0YXR1cyI6IiIsImRlZmF1bHRDb21wYW55IjpudWxsLCJjcmVhdGVkQXQiOiIyMDIyLTEwLTEyVDEzOjQzOjMzLjIwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTEwLTIxVDA3OjU1OjAxLjg4NloiLCJfX3YiOjB9LCJpYXQiOjE2Njg3ODI1MDYsImV4cCI6MTY3MTM3NDUwNn0.dL046qtyHaJdcMemU83Q1-uf8FvTPJEoPM1i0eks5bE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseUrl}}api/v1/teams/63779be666ccc7048fc4d587?withOccurrences=1&companyId=63779a18b24aac5c973a0fd2",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"v1",
+						"teams",
+						"63779be666ccc7048fc4d587"
+					],
+					"query": [
+						{
+							"key": "withOccurrences",
+							"value": "1"
+						},
+						{
+							"key": "companyId",
+							"value": "63779a18b24aac5c973a0fd2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Klik Team",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYzNDZjNDg1NTc1NzdhMWM5NDhhODU1MSIsImdvb2dsZUlkIjoiMTE3NjQ1MDEyMjQ3NTM1NzkyMjM5IiwiZW1haWwiOiJuY2FoMTdAZ21haWwuY29tIiwiZnVsbE5hbWUiOiJuY2FoIDE3IiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BTG01d3UzT0o3cjU5R1B5czZvMGVUSGxEMzkzR3d0MFlwTmdqenZTUUY0Sj1zOTYtYyIsImJpbyI6IiIsInN0YXR1cyI6IiIsImRlZmF1bHRDb21wYW55IjpudWxsLCJjcmVhdGVkQXQiOiIyMDIyLTEwLTEyVDEzOjQzOjMzLjIwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTEwLTIxVDA3OjU1OjAxLjg4NloiLCJfX3YiOjB9LCJpYXQiOjE2Njg3ODI1MDYsImV4cCI6MTY3MTM3NDUwNn0.dL046qtyHaJdcMemU83Q1-uf8FvTPJEoPM1i0eks5bE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"currentTeam\": {\r\n        \"_id\": \"637b71ecb24aac5c97536571\",\r\n        \"name\": \"Testingg22\",\r\n        \"desc\": \"s\",\r\n        \"members\": [\r\n            {\r\n                \"_id\": \"6346c48557577a1c948a8551\",\r\n                \"email\": \"ncah17@gmail.com\",\r\n                \"fullName\": \"ncah 17\",\r\n                \"photoUrl\": \"https://lh3.googleusercontent.com/a/ALm5wu3OJ7r59GPys6o0eTHlD393Gwt0YpNgjzvSQF4J=s96-c\"\r\n            }\r\n        ],\r\n        \"boards\": [\r\n            {\r\n                \"_id\": \"637b71ecb24aac5c97536575\",\r\n                \"name\": \"Kanban Board\",\r\n                \"desc\": \"Track progress with this Kanban-styled board\",\r\n                \"lists\": []\r\n            }\r\n        ],\r\n        \"type\": \"team\",\r\n        \"archived\": {\r\n            \"status\": false\r\n        },\r\n        \"createdAt\": \"2022-11-21T12:41:16.186Z\",\r\n        \"updatedAt\": \"2022-11-21T12:41:16.203Z\",\r\n        \"__v\": 0,\r\n        \"blast\": {\r\n            \"_id\": \"637b71ecb24aac5c97536577\",\r\n            \"posts\": [],\r\n            \"createdAt\": \"2022-11-21T12:41:16.195Z\",\r\n            \"updatedAt\": \"2022-11-21T12:41:16.195Z\"\r\n        },\r\n        \"bucket\": {\r\n            \"_id\": \"637b71ecb24aac5c9753657a\",\r\n            \"docs\": [],\r\n            \"buckets\": [],\r\n            \"files\": [],\r\n            \"title\": \"Docs & Files\",\r\n            \"type\": \"main\",\r\n            \"archived\": {\r\n                \"status\": false\r\n            },\r\n            \"isPublic\": true,\r\n            \"subscribers\": [],\r\n            \"createdAt\": \"2022-11-21T12:41:16.195Z\",\r\n            \"updatedAt\": \"2022-11-21T12:41:16.195Z\",\r\n            \"__v\": 0\r\n        },\r\n        \"checkIn\": {\r\n            \"_id\": \"637b71ecb24aac5c97536578\",\r\n            \"questions\": []\r\n        },\r\n        \"groupChat\": {\r\n            \"_id\": \"637b71ecb24aac5c97536576\",\r\n            \"messages\": [],\r\n            \"attachments\": [],\r\n            \"createdAt\": \"2022-11-21T12:41:16.195Z\",\r\n            \"updatedAt\": \"2022-11-21T12:41:16.195Z\",\r\n            \"__v\": 0\r\n        },\r\n        \"schedule\": {\r\n            \"_id\": \"637b71ecb24aac5c97536579\",\r\n            \"googleCalendar\": {\r\n                \"calendarId\": null,\r\n                \"aclRuleId\": null,\r\n                \"calendarIcsLink\": null,\r\n                \"calendarHtmlLink\": null\r\n            },\r\n            \"events\": [],\r\n            \"setPublic\": false,\r\n            \"createdAt\": \"2022-11-21T12:41:16.195Z\",\r\n            \"updatedAt\": \"2022-11-21T12:41:16.195Z\",\r\n            \"__v\": 0,\r\n            \"fromDate\": \"2022-11-21T12:50:29.790Z\",\r\n            \"untilDate\": \"2022-12-22T12:50:29.790Z\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}api/v1/teams/637b71ecb24aac5c97536571?withOccurrences=1&companyId=63779a18b24aac5c973a0fd2",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"v1",
+						"teams",
+						"637b71ecb24aac5c97536571"
+					],
+					"query": [
+						{
+							"key": "withOccurrences",
+							"value": "1"
+						},
+						{
+							"key": "companyId",
+							"value": "63779a18b24aac5c973a0fd2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
